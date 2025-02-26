@@ -3,7 +3,7 @@ name = "basic-pitch-torch"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.10"
 dependencies = [
     "librosa>=0.10.2.post1",
     "mir-eval>=0.8.2",
