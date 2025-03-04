@@ -15,9 +15,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from importlib.resources import files
 import pathlib
 
 def build_icassp_2022_model_path() -> pathlib.Path:
-    return pathlib.Path(__file__).parent / "assets/basic_pitch_pytorch_icassp2022.pth"
+    return files('basic_pitch_torch').joinpath('basic_pitch_pytorch_icassp_2022.pth')
 
 ICASSP_MODEL_PATH = build_icassp_2022_model_path()
