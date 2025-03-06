@@ -35,7 +35,7 @@ from basic_pitch_torch.constants import (
     ANNOTATIONS_FPS,
     FFT_HOP,
 )
-from basic_pitch_torch import note_creation as infer
+from basic_pitch_torch import note_creation as infer, ICASSP_MODEL_PATH
 
 
 def frame_with_pad(x: np.array, frame_length: int, hop_size: int) -> np.array:
@@ -268,7 +268,7 @@ def save_note_events(
 
 def predict(
     audio_path: Union[pathlib.Path, str],
-    model_path: Union[pathlib.Path, str] = "assets/basic_pitch_pytorch_icassp_2022.pth",
+    model_path: Union[pathlib.Path, str] = ICASSP_MODEL_PATH,
     onset_threshold: float = 0.5,
     frame_threshold: float = 0.3,
     minimum_note_length: float = 127.70,
